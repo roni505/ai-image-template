@@ -1,22 +1,37 @@
+import Customer from "@/ui/customer";
+import FAQ from "@/ui/faq";
+import Features from "@/ui/features";
+import FinalCTA from "@/ui/final-cta";
+import Footer from "@/ui/footer";
+import Hero from "@/ui/hero";
+import Pricing from "@/ui/pricing";
+
 export default function Home() {
   return (
     <>
-      <header>Here will be the hero</header>
-
+      <header>
+        <Hero />
+      </header>
       <main>
-        <section className="rounded bg-blue-500 p-2 text-white hover:bg-blue-600">
-          Features
+        <section>
+          <Customer />
         </section>
-        <section className="mt-52">Customers</section>
-        <section className="mt-52">Benefits</section>
-        <section className="mt-52">Pricing</section>
-        <section className="mt-52">Pricing</section>
-        <section className="mt-52">Pricing</section>
-        <section className="mt-52">Pricing</section>
-        <section className="mt-52">Pricing</section>
+        <section>
+          <Features />
+        </section>
+        <section>
+          <Pricing />
+        </section>
+        <section>
+          <FAQ />
+        </section>
+        <section>
+          <FinalCTA />
+        </section>
       </main>
-
-      <footer>Footer</footer>
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 }
