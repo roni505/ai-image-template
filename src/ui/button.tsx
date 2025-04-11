@@ -10,7 +10,7 @@ type ButtonProps = {
 
 const variantStyle = {
   primary: "border-strokeColor border bg-white font-medium text-green-950",
-  secondary: "text-gray-300 border-strokeColor border",
+  secondary: "text-gray-300 border-strokeColor border bg-[#2A6B3F]",
   delete: "text-white border-red-700 border bg-[#340000] hover:bg-red-800",
 };
 

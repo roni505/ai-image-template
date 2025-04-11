@@ -2,7 +2,7 @@ import Button from "./button";
 
 const FinalCTA = () => {
   return (
-    <section className="flex w-full flex-col">
+    <section className="flex w-full flex-col bg-[#F2F1E9]">
       <div className="mx-auto mt-52 mb-36 flex max-w-5xl flex-col items-center justify-center px-4">
         <h2 className="leading text-center text-3xl font-medium sm:text-5xl lg:text-6xl">
           Ready to Revolutionize Your Workflow?

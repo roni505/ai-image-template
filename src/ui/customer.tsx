@@ -3,8 +3,8 @@ import { Star } from "lucide-react";
 
 const Customer = () => {
   return (
-    <div className="mx-auto flex w-full items-center justify-center bg-[#F8F1E4]">
-      <div className="grid max-w-6xl items-center gap-4 px-5 py-28 lg:grid-cols-2 lg:px-0">
+    <div className="mx-auto flex w-full items-center justify-center bg-[#F2F1E9]">
+      <div className="grid max-w-6xl items-center gap-5 px-5 py-28 lg:grid-cols-2 lg:px-0">
         <div>
           <div className="flex gap-3">
             <Star fill="true" />
@@ -23,11 +23,11 @@ const Customer = () => {
         </div>
         <div className="w-full">
           <Image
-            src="/heroImage.svg"
-            width={500}
-            height={300}
+            src="/customerIMG.svg"
+            width={520}
+            height={600}
             alt="Image"
-            className="w-full"
+            className="h-screen w-full"
           />
         </div>
       </div>

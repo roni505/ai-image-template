@@ -5,7 +5,7 @@ import Button from "./button";
 
 const Hero = () => {
   return (
-    <div className="m-2 flex h-full flex-col rounded-4xl bg-[#4B3621]">
+    <div className="flex h-full flex-col bg-[#193623]">
       <div className="mx-auto w-full max-w-6xl">
         {/* nav bar */}
         <nav className="mx-auto flex w-full max-w-7xl items-center justify-between py-6">

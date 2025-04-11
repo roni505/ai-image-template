@@ -6,8 +6,8 @@ export type PlanIncludeInput = {
 
 const PlanIncludes = ({ text }: PlanIncludeInput) => {
   return (
-    <div className="flex gap-2 text-base text-neutral-400">
-      <Image src="" width={20} height={20} alt="Tick icon" />
+    <div className="mb-3 flex gap-2 text-base text-black">
+      <Image src="/tickIcon.svg" width={24} height={24} alt="Tick icon" />
       <span>{text}</span>
     </div>
   );

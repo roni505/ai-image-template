@@ -4,7 +4,7 @@ import Link from "./link";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-[#4B3621]">
+    <footer className="w-full bg-[#193623]">
       <div className="mx-auto flex max-w-7xl justify-between px-5 py-12 max-md:flex-col lg:px-0">
         <div className="mb-6 flex h-auto justify-between lg:mb-0 lg:flex-col">
           <Logo />
