@@ -63,11 +63,33 @@ const Card = ({ feature, idx }: { feature: FeaturesInput; idx: number }) => {
       key={feature.title}
       className="grid max-w-6xl items-center gap-8 px-5 py-28 lg:grid-cols-2 lg:px-0"
     >
-      <div className={`w-full ${idx % 2 === 0 ? "lg:order-1" : "lg:order-2"}`}>
+      <motion.div
+        initial={{ opacity: 0, x: idx % 2 === 0 ? -100 : 100 }}
+        whileInView={{
+          opacity: 1,
+          x: 0,
+          transition: {
+            delay: 0.3,
+            duration: 0.4,
+            ease: "easeOut",
+          },
+        }}
+        className={`w-full ${idx % 2 === 0 ? "lg:order-1" : "lg:order-2"}`}
+      >
         <h2 className="mt-8 text-[40px] font-semibold">{feature.title}</h2>
         <p className="mt-6 text-xl text-[#707070]">{feature.description}</p>
-      </div>
-      <div
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, x: idx % 2 !== 0 ? -100 : 100 }}
+        whileInView={{
+          opacity: 1,
+          x: 0,
+          transition: {
+            delay: 0.3,
+            duration: 0.4,
+            ease: "easeOut",
+          },
+        }}
         className={`relative w-full overflow-hidden ${idx % 2 === 0 ? "lg:order-2" : "lg:order-1"} h-[410px] w-full rounded-2xl bg-[#F2F1E9] lg:w-[566px]`}
       >
         <motion.div
@@ -83,7 +105,7 @@ const Card = ({ feature, idx }: { feature: FeaturesInput; idx: number }) => {
             className="absolute top-0 rounded-lg lg:right-0"
           />
         </motion.div>
-      </div>
+      </motion.div>
     </div>
   );
 };
