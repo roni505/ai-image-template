@@ -1,6 +1,7 @@
 "use client";
 
-import { Dispatch, SetStateAction, useState } from "react";
+import { type Dispatch, type SetStateAction, useState } from "react";
+import { motion } from "motion/react";
 
 export type TogglePrizeInput = {
   save: string;
@@ -8,47 +9,61 @@ export type TogglePrizeInput = {
   toggle: boolean;
 };
 
-const TogglePrice = ({ save, setToggle, toggle }: TogglePrizeInput) => {
+const TogglePrice = ({ setToggle, toggle }: TogglePrizeInput) => {
   const [annually, setAnnually] = useState(false);
   const [monthly, setMonthly] = useState(true);
+
   return (
     <>
-      <div className="flex items-center justify-center rounded-4xl border bg-[#F2F1E9] px-7 py-4 text-sm">
-        <div
-          className="flex cursor-pointer items-center justify-center"
-          onClick={() => {
-            setAnnually(!annually), setMonthly(!monthly), setToggle(!toggle);
+      <div className="relative flex items-center rounded-full bg-[#EDEBE8] px-3 py-5 text-sm">
+        <motion.div
+          className="absolute rounded-full bg-white"
+          initial={false}
+          animate={{
+            x: monthly ? "0%" : "100%",
+            width: "45%",
+            height: "70%",
           }}
+          transition={{
+            type: "spring",
+            stiffness: 300,
+            damping: 30,
+          }}
+          // style={{
+          //   top: "15%",
+          //   left: "3%",
+          // }}
+        />
+
+        <div
+          onClick={() => {
+            setAnnually(!annually);
+            setMonthly(!monthly);
+            setToggle(!toggle);
+          }}
+          className="z-10 cursor-pointer rounded-full text-base"
         >
-          <span className="relative mr-2 h-5 w-5 rounded-full border border-[#CACACA]">
-            {annually && (
-              <span className="absolute top-1/2 left-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 transform rounded-full bg-[#CACACA]"></span>
-            )}
+          <span
+            className={`rounded-full px-5 py-3 font-medium ${monthly ? "text-neutral-900" : "text-neutral-500"}`}
+          >
+            Monthly
           </span>
-          <span className="text-base">Monthly</span>
         </div>
         <div
-          className="ml-7 flex cursor-pointer items-center justify-center"
           onClick={() => {
-            setMonthly(!monthly), setAnnually(!annually), setToggle(!toggle);
+            setMonthly(!monthly);
+            setAnnually(!annually);
+            setToggle(!toggle);
           }}
+          className="z-10 cursor-pointer rounded-full text-base"
         >
-          <span className="relative mr-2 h-5 w-5 rounded-full border border-[#CACACA]">
-            {monthly && (
-              <span className="absolute top-1/2 left-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 transform rounded-full bg-[#CACACA]"></span>
-            )}
+          <span
+            className={`rounded-full px-5 py-3 font-medium ${monthly ? "text-neutral-500" : "text-neutral-900"}`}
+          >
+            Annually
           </span>
-          <span className="mr-3 text-base">Annually</span>
-          <span className="font-medium text-[#00FFA5]">{save}</span>
         </div>
       </div>
-      {annually ? (
-        <span className="text-sm text-neutral-400">Billed monthly</span>
-      ) : (
-        <span className="text-sm text-neutral-400">
-          Billed in one annual payment.
-        </span>
-      )}
     </>
   );
 };

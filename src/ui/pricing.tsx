@@ -14,8 +14,8 @@ const Pricing = () => {
       className="mx-auto flex w-full flex-col items-center justify-center"
     >
       <SectionHeader
-        title="Choose the Perfect Plan for Your Business"
-        description="Choose a plan that fits your business, whether you're just starting out or scaling to new heights."
+        title="Simple pricing, no surprises."
+        description="Choose a plan that fits your business. No hidden fees, no long-term contracts—just powerful customer insights."
       />
       <div className="flex w-full flex-col items-center gap-3">
         <TogglePrice save="Save 20%" setToggle={setToggle} toggle={toggle} />

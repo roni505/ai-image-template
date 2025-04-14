@@ -41,7 +41,7 @@ const Customer = () => {
             opacity: 1,
             x: 0,
             transition: {
-              delay: 0.8,
+              delay: 1,
               duration: 0.4,
               ease: "easeOut",
             },
