@@ -5,6 +5,7 @@ import Button from "./button";
 import PlanIncludes from "./plan-includes";
 import SectionHeader from "./section-header";
 import TogglePrice from "./toggle-button";
+import { motion } from "motion/react";
 
 const Pricing = () => {
   const [toggle, setToggle] = useState(false);
@@ -21,7 +22,22 @@ const Pricing = () => {
         <TogglePrice save="Save 20%" setToggle={setToggle} toggle={toggle} />
         <div className="mt-12 flex w-full max-w-7xl flex-wrap items-center justify-center gap-4 px-5 lg:px-0">
           {/* 1st Prizing card */}
-          <div className="flex w-full flex-col rounded-2xl bg-[#F2F1E9] px-7 py-8 lg:w-[350px]">
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 50,
+            }}
+            whileInView={{
+              y: 0,
+              opacity: 1,
+              transition: {
+                delay: 1,
+                duration: 0.5,
+                ease: "easeInOut",
+              },
+            }}
+            className="flex w-full flex-col rounded-2xl bg-[#F2F1E9] px-7 py-8 lg:w-[350px]"
+          >
             <span className="text-2xl font-medium">Free</span>
             <span className="mt-3 text-sm text-neutral-500">
               Perfect for small teams and startups
@@ -41,9 +57,24 @@ const Pricing = () => {
               <PlanIncludes text="Basic integrations" />
             </div>
             <Button variant="primary" text="Sign up" className="mt-7" />{" "}
-          </div>
+          </motion.div>
           {/* 2rd pricing card */}
-          <div className="flex w-full flex-col rounded-2xl bg-[#F2F1E9] px-7 py-8 lg:w-[350px]">
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 50,
+            }}
+            whileInView={{
+              y: 0,
+              opacity: 1,
+              transition: {
+                delay: 1.2,
+                duration: 0.5,
+                ease: "easeInOut",
+              },
+            }}
+            className="flex w-full flex-col rounded-2xl bg-[#F2F1E9] px-7 py-8 lg:w-[350px]"
+          >
             <span className="text-2xl font-medium">Team</span>
             <span className="mt-3 text-sm text-neutral-500">
               Complete collaboration for larger teams.
@@ -63,7 +94,7 @@ const Pricing = () => {
               <PlanIncludes text="Basic integrations" />
             </div>
             <Button variant="secondary" text="Sign up" className="mt-7" />
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

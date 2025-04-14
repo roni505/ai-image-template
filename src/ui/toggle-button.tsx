@@ -15,7 +15,22 @@ const TogglePrice = ({ setToggle, toggle }: TogglePrizeInput) => {
 
   return (
     <>
-      <div className="relative flex items-center rounded-full bg-[#EDEBE8] px-3 py-5 text-sm">
+      <motion.div
+        initial={{
+          opacity: 0,
+          y: 50,
+        }}
+        whileInView={{
+          y: 0,
+          opacity: 1,
+          transition: {
+            delay: 0.8,
+            duration: 0.5,
+            ease: "easeInOut",
+          },
+        }}
+        className="relative flex items-center rounded-full bg-[#EDEBE8] px-3 py-5 text-sm"
+      >
         <motion.div
           className="absolute rounded-full bg-white"
           initial={false}
@@ -63,7 +78,7 @@ const TogglePrice = ({ setToggle, toggle }: TogglePrizeInput) => {
             Annually
           </span>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

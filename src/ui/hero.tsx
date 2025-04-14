@@ -1,7 +1,11 @@
+"use client";
+
 import Image from "next/image";
 import Link from "./link";
 import Logo from "./logo";
 import Button from "./button";
+import { motion } from "motion/react";
+import AnimatedText from "./animated-text";
 
 const Hero = () => {
   return (
@@ -20,18 +24,45 @@ const Hero = () => {
         {/* hero section */}
         <div className="flex h-full flex-wrap justify-center gap-5 px-5 lg:px-0">
           <div className="mt-32 flex w-[682px] flex-col">
-            <h1 className="text-6xl font-semibold text-white">
-              Know your customers, grow your business.
-            </h1>
-            <p className="mt-6 text-xl text-neutral-400">
-              Vergé helps you track, analyze, and understand your customers with
-              real-time insights to boost retention and revenue.
-            </p>
-            <div className="mt-5">
-              <Button variant="primary" text="Get Started" />
+            <div className="text-6xl font-semibold text-white">
+              <AnimatedText text="Know your customers, grow your business." />
             </div>
+            <div className="mt-6 text-xl text-neutral-400">
+              <AnimatedText
+                delay={0.6}
+                text="Vergé helps you track, analyze, and understand your customers with real-time insights to boost retention and revenue."
+              />
+            </div>
+            <motion.div
+              initial={{
+                opacity: 0,
+              }}
+              animate={{
+                opacity: 1,
+                transition: {
+                  delay: 1,
+                  duration: 0.3,
+                  ease: "easeInOut",
+                },
+              }}
+              className="mt-5"
+            >
+              <Button variant="primary" text="Get Started" />
+            </motion.div>
           </div>
-          <div className="mb-10 w-full lg:w-[450px]">
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              transition: {
+                delay: 1,
+                duration: 0.4,
+                ease: "easeOut",
+              },
+            }}
+            className="mb-10 w-full lg:w-[450px]"
+          >
             <Image
               src="heroImage.svg"
               width={450}
@@ -39,7 +70,7 @@ const Hero = () => {
               alt="hero Image"
               className="w-full"
             />
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
