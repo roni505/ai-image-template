@@ -38,7 +38,9 @@ const AnimatedText = ({ text, className, delay }: AnimatedTextProps) => {
         className={`${className}`}
       >
         {text.split("").map((char) => (
-          <motion.span variants={defaultAnimation}>{char}</motion.span>
+          <motion.span key={char} variants={defaultAnimation}>
+            {char}
+          </motion.span>
         ))}
       </motion.span>
     </div>
