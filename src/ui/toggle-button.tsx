@@ -29,6 +29,9 @@ const TogglePrice = ({ setToggle, toggle }: TogglePrizeInput) => {
             ease: "easeInOut",
           },
         }}
+        viewport={{
+          once: true,
+        }}
         className="relative flex items-center rounded-full bg-[#EDEBE8] px-3 py-5 text-sm"
       >
         <motion.div

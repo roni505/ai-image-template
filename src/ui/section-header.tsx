@@ -24,6 +24,9 @@ const SectionHeader = ({ title, description }: SectionProps) => {
             ease: "easeInOut",
           },
         }}
+        viewport={{
+          once: true,
+        }}
         className="mb-5 text-center text-3xl font-medium text-black sm:text-4xl md:text-5xl"
       >
         {title}
@@ -42,7 +45,10 @@ const SectionHeader = ({ title, description }: SectionProps) => {
             ease: "easeInOut",
           },
         }}
-        className="mb-16 text-center text-lg text-neutral-800 sm:max-w-[460px]"
+        viewport={{
+          once: true,
+        }}
+        className="mb-16 text-center text-lg text-[#707070] sm:max-w-[460px]"
       >
         {description}
       </motion.p>

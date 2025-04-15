@@ -15,8 +15,8 @@ const Pricing = () => {
       className="mx-auto flex w-full flex-col items-center justify-center"
     >
       <SectionHeader
-        title="Simple pricing, no surprises."
-        description="Choose a plan that fits your business. No hidden fees, no long-term contracts—just powerful customer insights."
+        title="Clear pricing, no hidden fees."
+        description="No hidden fees, no commitments—just stunning, high-quality AI-generated art whenever inspiration strikes."
       />
       <div className="flex w-full flex-col items-center gap-3">
         <TogglePrice save="Save 20%" setToggle={setToggle} toggle={toggle} />
@@ -35,6 +35,9 @@ const Pricing = () => {
                 duration: 0.5,
                 ease: "easeInOut",
               },
+            }}
+            viewport={{
+              once: true,
             }}
             className="flex w-full flex-col rounded-2xl bg-[#F2F1E9] px-7 py-8 lg:w-[350px]"
           >
@@ -73,6 +76,9 @@ const Pricing = () => {
                 ease: "easeInOut",
               },
             }}
+            viewport={{
+              once: true,
+            }}
             className="flex w-full flex-col rounded-2xl bg-[#F2F1E9] px-7 py-8 lg:w-[350px]"
           >
             <span className="text-2xl font-medium">Team</span>
@@ -85,7 +91,7 @@ const Pricing = () => {
                 Forever
               </span>
             </span>
-            <span className="mt-8 text-base">All Pro plan features, plus</span>
+            <span className="mt-8 text-base">All free plan features, plus</span>
             <div className="mt-4 flex flex-col gap-2">
               <PlanIncludes text="Work with up to 3 teammates" />
               <PlanIncludes text="Core task management features" />

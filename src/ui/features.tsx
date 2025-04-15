@@ -13,28 +13,28 @@ export type FeaturesInput = {
 
 const FeaturesArray: FeaturesInput[] = [
   {
-    title: "Cleani and intuitive interface",
+    title: "Clean and Intuitive Interface",
     description:
-      "Designed for clarity, Vergé makes it easy to find the customer insights you need without distractions. Every dashboard, report, and profile is structured for a seamless experience.",
+      "Designed for effortless creativity, ArtMuse offers a distraction-free workspace where you can upload, edit, and transform images into art with just a few clicks. Every tool is exactly where you need it.",
     content: "/featureImg1.svg",
   },
   {
-    title: "Cleanm and intuitive interface",
+    title: "Fast & Powerful AI Engine",
     description:
-      "Designed for clarity, Vergé makes it easy to find the customer insights you need without distractions. Every dashboard, report, and profile is structured for a seamless experience.",
+      "Our advanced AI processes your images in seconds—delivering stunning, high-quality artwork inspired by classic styles and modern techniques, all without the wait.",
     content: "/featureImg2.svg",
   },
   {
-    title: "Cleannn and intuitive interface",
+    title: "Historic Beauty. Modern Tech.",
     description:
-      "Designed for clarity, Vergé makes it easy to find the customer insights you need without distractions. Every dashboard, report, and profile is structured for a seamless experience.",
+      "ArtMuse blends the beauty of ancient artistic traditions with cutting-edge AI. Each piece is more than just a filter—it’s a modern take on timeless expression.",
     content: "/featureImg3.svg",
   },
 ];
 
 const Features = () => {
   return (
-    <div className="mx-auto flex w-full flex-col items-center justify-center">
+    <div className="mx-auto flex w-full flex-col items-center justify-center overflow-hidden">
       {FeaturesArray.map((feature, idx) => (
         <Card feature={feature} idx={idx} key={feature.title} />
       ))}
@@ -74,6 +74,9 @@ const Card = ({ feature, idx }: { feature: FeaturesInput; idx: number }) => {
             ease: "easeOut",
           },
         }}
+        viewport={{
+          once: true,
+        }}
         className={`w-full ${idx % 2 === 0 ? "lg:order-1" : "lg:order-2"}`}
       >
         <h2 className="mt-8 text-[40px] font-semibold">{feature.title}</h2>
@@ -89,6 +92,9 @@ const Card = ({ feature, idx }: { feature: FeaturesInput; idx: number }) => {
             duration: 0.4,
             ease: "easeOut",
           },
+        }}
+        viewport={{
+          once: true,
         }}
         className={`relative w-full overflow-hidden ${idx % 2 === 0 ? "lg:order-2" : "lg:order-1"} h-[410px] w-full rounded-2xl bg-[#F2F1E9] lg:w-[566px]`}
       >

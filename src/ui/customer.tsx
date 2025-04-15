@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 
 const Customer = () => {
   return (
-    <div className="mx-auto flex w-full items-center justify-center bg-[#F2F1E9]">
+    <div className="mx-auto flex w-full items-center justify-center overflow-hidden bg-[#F2F1E9]">
       <div className="grid max-w-6xl items-center gap-5 px-5 py-28 lg:grid-cols-2 lg:px-0">
         <motion.div
           initial={{ opacity: 0, x: -100 }}
@@ -19,6 +19,9 @@ const Customer = () => {
               ease: "easeOut",
             },
           }}
+          viewport={{
+            once: true,
+          }}
         >
           <div className="flex gap-3">
             <Star fill="true" />
@@ -28,11 +31,11 @@ const Customer = () => {
             <Star fill="true" />
           </div>
           <h2 className="mt-8 text-4xl font-medium">
-            Vergé completely changed how we understand our customers—our
-            retention rate has never been higher.
+            ArtMuse turned our basic images into stunning visuals—our engagement
+            has skyrocketed.
           </h2>
           <p className="mt-9 text-base text-neutral-800">
-            — Sammy Lee at Introvert Fasion
+            — Aria Collins at Nova Studio
           </p>
         </motion.div>
         <motion.div
@@ -45,6 +48,9 @@ const Customer = () => {
               duration: 0.4,
               ease: "easeOut",
             },
+          }}
+          viewport={{
+            once: true,
           }}
           className="w-full"
         >

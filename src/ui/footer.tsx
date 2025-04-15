@@ -9,8 +9,8 @@ const Footer = () => {
         <div className="mb-6 flex h-auto flex-col lg:mb-0">
           <Logo />
           <p className="mt-4 max-w-64 text-[#87968C]">
-            Vergé is a customer data platform that helps businesses track,
-            analyze, and understand their customers.
+            ArtMuse turns your images into AI-generated art, combining
+            historical creativity with modern technology.
           </p>
         </div>
         <div className="flex h-full flex-wrap gap-44">
@@ -32,7 +32,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <span className="mx-auto flex h-[1px] w-full bg-gradient-to-r from-transparent via-[#363636] to-transparent"></span>
+      <span className="mx-auto flex h-px w-full bg-gradient-to-r from-transparent via-[#164901] to-transparent"></span>
       <div className="flex items-center justify-center py-6">
         <span className="text-neutral-400">Built by Roni</span>
       </div>

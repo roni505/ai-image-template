@@ -5,27 +5,30 @@ import Accordion from "./accordion";
 
 const FAQ = () => {
   return (
-    <div className="mx-auto flex max-w-3xl flex-col items-center justify-center">
+    <div className="mx-auto flex max-w-3xl flex-col items-center justify-center py-24">
       <SectionHeader
-        title="Questions? We've got answers."
-        description="Find answers to the most common questions about Vergé, including features, pricing, and how to get started."
+        title="Questions? We’re here to help."
+        description="Find answers to the most common questions about ArtMuse, including features, pricing, and how to get started."
       />
-      <div className="flex w-full flex-col">
+      <div className="mt-5 flex w-full flex-col">
         <Accordion
-          question="What is Vergé and how does it work?"
-          answer="Vergé is a customer data platform that helps businesses track, analyze, and understand their customers. It centralizes customer insights, automates reports, and provides AI-driven retention tools to improve engagement and reduce churn."
+          question="How does ArtMuse transform images into AI-generated art?"
+          answer="ArtMuse uses advanced AI algorithms to analyze and enhance your images, applying artistic styles inspired by history and modern techniques. Upload any image, and watch it transform into a unique piece of art."
         />
+        <span className="my-8 h-px w-full bg-neutral-100"></span>
         <Accordion
-          question="What is Vergé and how does it work?"
-          answer="Vergé is a customer data platform that helps businesses track, analyze, and understand their customers. It centralizes customer insights, automates reports, and provides AI-driven retention tools to improve engagement and reduce churn."
+          question="Is ArtMuse easy to use?"
+          answer="Absolutely! ArtMuse is designed with simplicity in mind. The interface is intuitive, allowing users to quickly upload, customize, and generate artwork without needing any technical expertise."
         />
+        <span className="my-8 h-px w-full bg-neutral-100"></span>
         <Accordion
-          question="What is Vergé and how does it work?"
-          answer="Vergé is a customer data platform that helps businesses track, analyze, and understand their customers. It centralizes customer insights, automates reports, and provides AI-driven retention tools to improve engagement and reduce churn."
+          question="Can I try ArtMuse before committing"
+          answer="Yes! ArtMuse offers a free trial to give you a taste of our AI-powered art transformation. Experience the magic before choosing the plan that works best for you."
         />
+        <span className="my-8 h-px w-full bg-neutral-100"></span>
         <Accordion
-          question="What is Vergé and how does it work?"
-          answer="Vergé is a customer data platform that helps businesses track, analyze, and understand their customers. It centralizes customer insights, automates reports, and provides AI-driven retention tools to improve engagement and reduce churn."
+          question="What types of images can I transform with ArtMuse?"
+          answer="You can transform any image—photos, illustrations, or designs—into stunning artwork. Whether it’s a portrait, landscape, or abstract piece, ArtMuse will turn it into something extraordinary."
         />
       </div>
     </div>
