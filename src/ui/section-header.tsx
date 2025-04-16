@@ -19,7 +19,6 @@ const SectionHeader = ({ title, description }: SectionProps) => {
           y: 0,
           opacity: 1,
           transition: {
-            delay: 0.3,
             duration: 0.5,
             ease: "easeInOut",
           },
@@ -40,7 +39,7 @@ const SectionHeader = ({ title, description }: SectionProps) => {
           y: 0,
           opacity: 1,
           transition: {
-            delay: 0.6,
+            delay: 0.1,
             duration: 0.5,
             ease: "easeInOut",
           },

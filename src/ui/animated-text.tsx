@@ -37,8 +37,8 @@ const AnimatedText = ({ text, className, delay }: AnimatedTextProps) => {
         aria-hidden
         className={`${className}`}
       >
-        {text.split("").map((char) => (
-          <motion.span key={char} variants={defaultAnimation}>
+        {text.split("").map((char, idx) => (
+          <motion.span key={idx} variants={defaultAnimation}>
             {char}
           </motion.span>
         ))}

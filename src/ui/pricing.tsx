@@ -31,7 +31,7 @@ const Pricing = () => {
               y: 0,
               opacity: 1,
               transition: {
-                delay: 1,
+                delay: 0.3,
                 duration: 0.5,
                 ease: "easeInOut",
               },
@@ -71,7 +71,7 @@ const Pricing = () => {
               y: 0,
               opacity: 1,
               transition: {
-                delay: 1.2,
+                delay: 0.6,
                 duration: 0.5,
                 ease: "easeInOut",
               },
