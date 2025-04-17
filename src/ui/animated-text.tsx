@@ -25,7 +25,6 @@ const AnimatedText = ({ text, className, delay }: AnimatedTextProps) => {
   };
   return (
     <div className="flex">
-      {/* for screen reader only */}
       <span className="sr-only">{text}</span>
       <motion.span
         ref={ref}
