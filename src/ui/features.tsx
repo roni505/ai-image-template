@@ -34,7 +34,7 @@ const FeaturesArray: FeaturesInput[] = [
 
 const Features = () => {
   return (
-    <div className="mx-auto flex w-full flex-col items-center justify-center overflow-hidden bg-[#F2F1E9]">
+    <div className="mx-auto flex w-full flex-col items-center justify-center overflow-hidden">
       {FeaturesArray.map((feature, idx) => (
         <Card feature={feature} idx={idx} key={feature.title} />
       ))}

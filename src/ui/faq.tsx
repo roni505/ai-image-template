@@ -5,7 +5,7 @@ import Accordion from "./accordion";
 
 const FAQ = () => {
   return (
-    <div className="mx-auto flex max-w-3xl flex-col items-center justify-center bg-[#F2F1E9] py-24">
+    <div className="mx-auto flex max-w-3xl flex-col items-center justify-center py-24">
       <SectionHeader
         title="Questions? We’re here to help."
         description="Find answers to the most common questions about ArtMuse, including features, pricing, and how to get started."
