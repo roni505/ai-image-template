@@ -24,7 +24,7 @@ const TogglePrice = ({ setToggle, toggle }: TogglePrizeInput) => {
           y: 0,
           opacity: 1,
           transition: {
-            delay: 0.8,
+            delay: 0.2,
             duration: 0.5,
             ease: "easeInOut",
           },
