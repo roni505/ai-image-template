@@ -34,7 +34,7 @@ const Accordion = ({ question, answer, delay }: AccordianInput) => {
       onClick={() => setIsOpen(!isOpen)}
     >
       <div className="flex w-full cursor-pointer justify-between px-5">
-        <h3 className="text-xl font-medium">{question}</h3>
+        <h3 className="text-xl font-medium text-black">{question}</h3>
         <motion.div
           animate={{
             rotate: isOpen ? 180 : 0,
@@ -59,7 +59,7 @@ const Accordion = ({ question, answer, delay }: AccordianInput) => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="mx-5 mt-6"
+            className="mx-5 mt-6 text-black"
           >
             {answer}
           </motion.p>

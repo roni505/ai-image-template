@@ -29,7 +29,7 @@ const Customer = () => {
             <Star fill="true" />
             <Star fill="true" />
           </div>
-          <h2 className="mt-8 text-4xl font-medium">
+          <h2 className="mt-8 text-4xl font-medium text-black">
             ArtMuse turned our basic images into stunning visuals—our engagement
             has skyrocketed.
           </h2>

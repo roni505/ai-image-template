@@ -34,7 +34,7 @@ const FeaturesArray: FeaturesInput[] = [
 
 const Features = () => {
   return (
-    <div className="mx-auto flex w-full flex-col items-center justify-center overflow-hidden">
+    <div className="mx-auto flex w-full flex-col items-center justify-center overflow-hidden bg-[#F2F1E9]">
       {FeaturesArray.map((feature, idx) => (
         <Card feature={feature} idx={idx} key={feature.title} />
       ))}
@@ -79,7 +79,9 @@ const Card = ({ feature, idx }: { feature: FeaturesInput; idx: number }) => {
         }}
         className={`w-full ${idx % 2 === 0 ? "lg:order-1" : "lg:order-2"}`}
       >
-        <h2 className="mt-8 text-[40px] font-semibold">{feature.title}</h2>
+        <h2 className="mt-8 text-[40px] font-semibold text-black">
+          {feature.title}
+        </h2>
         <p className="mt-6 text-xl text-[#707070]">{feature.description}</p>
       </motion.div>
       <motion.div
