@@ -11,7 +11,7 @@ export type AccordianInput = {
 };
 
 const Accordion = ({ question, answer, delay }: AccordianInput) => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <motion.div
       initial={{
